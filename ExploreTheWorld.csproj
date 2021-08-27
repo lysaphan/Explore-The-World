@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25904FE8-065A-4166-8E87-566114D8E783}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp1</RootNamespace>
+    <AssemblyName>WpfApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="France.xaml.cs">
+      <DependentUpon>France.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Video.xaml.cs">
+      <DependentUpon>Video.xaml</DependentUpon>
+    </Compile>
+    <Page Include="France.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ParisWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Video.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ParisWindow.xaml.cs">
+      <DependentUpon>ParisWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Disneyland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteHouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GrandKremlinPalace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ArcDeTriomphe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\NeuschwansteinCastle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SagradaFamilia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\St. Peter%27s Basilica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Alhambra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\petra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\The Blue Mosque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tai Mahaj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SaintBasilCathedral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Burj Khalifa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Pisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ParthenonAthens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SydneyOpera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\GoldenGateBridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\big ben.png" />
+    <Resource Include="Resources\Eiffel Tower.png" />
+    <Resource Include="Resources\tower bridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\grand canyon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\liberty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Niagara Falls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Colosseum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\giza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\masmak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Nabawi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Kinderdijk windmill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\touba-senegal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bran castle romania.png" />
+    <Resource Include="Resources\cradle of humankind africa.png" />
+    <Resource Include="Resources\Dublin Castle ireland.png" />
+    <Resource Include="Resources\Fuji Mountain japan.png" />
+    <Resource Include="Resources\Hallgrimskirkja iceland.png" />
+    <Resource Include="Resources\Ho Chi Minh Mausoleum.png" />
+    <Resource Include="Resources\Quezon Memorial Circle philippines.png" />
+    <Resource Include="Resources\Tian Tan Buddha Hong Kong.png" />
+    <Resource Include="Resources\tokyo tower japan.png" />
+    <Resource Include="Resources\Wellington Monument ireland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Taza pir mosque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Angkor Wat.png" />
+    <Resource Include="Resources\Belem Tower portugal.png" />
+    <Resource Include="Resources\ciudad mitad del mundo ecuador.png" />
+    <Resource Include="Resources\Forbidden city china.png" />
+    <Resource Include="Resources\great-wall-of-china.png" />
+    <Resource Include="Resources\Helsinki Senate Square Helsinki, Finland.png" />
+    <Resource Include="Resources\louvre.png" />
+    <Resource Include="Resources\machu picchu Andes Mountains in Peru.png" />
+    <Resource Include="Resources\Menara Gardens morocco.png" />
+    <Resource Include="Resources\mir-castle.png" />
+    <Resource Include="Resources\Obelisk Of Buenos Aires argentina.png" />
+    <Resource Include="Resources\Piedra Del Penol colombia.png" />
+    <Resource Include="Resources\San Juan Teotihuacán mexico.png" />
+    <Resource Include="Resources\Temple of Saint Sava Belgrade, Serbia.png" />
+    <Resource Include="Resources\wat-saket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Christ the Redeemer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\toronto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Singapore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bratislava Castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\landmark 81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Thailand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ChichenItza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sydney-harbour-bridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\sky tower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\abkhazia.png" />
+    <Resource Include="Flag\afghanistan.png" />
+    <Resource Include="Flag\aland islands.png" />
+    <Resource Include="Flag\albania.png" />
+    <Resource Include="Flag\algeria.png" />
+    <Resource Include="Flag\andorra.png" />
+    <Resource Include="Flag\angola.png" />
+    <Resource Include="Flag\anguilla.png" />
+    <Resource Include="Flag\antigua and barbuda.png" />
+    <Resource Include="Flag\argentina.png" />
+    <Resource Include="Flag\armenia.png" />
+    <Resource Include="Flag\aruba.png" />
+    <Resource Include="Flag\australia.png" />
+    <Resource Include="Flag\austria.png" />
+    <Resource Include="Flag\azerbaijan.png" />
+    <Resource Include="Flag\bahamas.png" />
+    <Resource Include="Flag\bahrain.png" />
+    <Resource Include="Flag\bangladesh.png" />
+    <Resource Include="Flag\barbados.png" />
+    <Resource Include="Flag\belarus.png" />
+    <Resource Include="Flag\belgium.png" />
+    <Resource Include="Flag\belize.png" />
+    <Resource Include="Flag\benin.png" />
+    <Resource Include="Flag\bermuda.png" />
+    <Resource Include="Flag\bhutan.png" />
+    <Resource Include="Flag\bolivia.png" />
+    <Resource Include="Flag\bonaire.png" />
+    <Resource Include="Flag\bosnia and herzegovina.png" />
+    <Resource Include="Flag\botswana.png" />
+    <Resource Include="Flag\brazil.png" />
+    <Resource Include="Flag\british columbia.png" />
+    <Resource Include="Flag\british indian ocean territory.png" />
+    <Resource Include="Flag\british virgin islands.png" />
+    <Resource Include="Flag\brunei.png" />
+    <Resource Include="Flag\bulgaria.png" />
+    <Resource Include="Flag\burkina faso.png" />
+    <Resource Include="Flag\burundi.png" />
+    <Resource Include="Flag\cambodia.png" />
+    <Resource Include="Flag\cameroon.png" />
+    <Resource Include="Flag\canada.png" />
+    <Resource Include="Flag\canary islands.png" />
+    <Resource Include="Flag\cape verde.png" />
+    <Resource Include="Flag\cayman islands.png" />
+    <Resource Include="Flag\central african republic.png" />
+    <Resource Include="Flag\ceuta.png" />
+    <Resource Include="Flag\chad.png" />
+    <Resource Include="Flag\chile.png" />
+    <Resource Include="Flag\china.png" />
+    <Resource Include="Flag\cocos island.png" />
+    <Resource Include="Flag\colombia.png" />
+    <Resource Include="Flag\comoros.png" />
+    <Resource Include="Flag\corsica.png" />
+    <Resource Include="Flag\costa rica.png" />
+    <Resource Include="Flag\croatia.png" />
+    <Resource Include="Flag\cuba.png" />
+    <Resource Include="Flag\curacao.png" />
+    <Resource Include="Flag\cyprus.png" />
+    <Resource Include="Flag\czech republic.png" />
+    <Resource Include="Flag\democratic republic of congo.png" />
+    <Resource Include="Flag\denmark.png" />
+    <Resource Include="Flag\djibouti.png" />
+    <Resource Include="Flag\dominica.png" />
+    <Resource Include="Flag\dominican republic.png" />
+    <Resource Include="Flag\east timor.png" />
+    <Resource Include="Flag\ecuador.png" />
+    <Resource Include="Flag\egypt.png" />
+    <Resource Include="Flag\el salvador.png" />
+    <Resource Include="Flag\england.png" />
+    <Resource Include="Flag\equatorial guinea.png" />
+    <Resource Include="Flag\eritrea.png" />
+    <Resource Include="Flag\estonia.png" />
+    <Resource Include="Flag\ethiopia.png" />
+    <Resource Include="Flag\european union.png" />
+    <Resource Include="Flag\falkland islands.png" />
+    <Resource Include="Flag\faroe islands.png" />
+    <Resource Include="Flag\fiji.png" />
+    <Resource Include="Flag\finland.png" />
+    <Resource Include="Flag\france.png" />
+    <Resource Include="Flag\french polynesia.png" />
+    <Resource Include="Flag\gabon.png" />
+    <Resource Include="Flag\galapagos islands.png" />
+    <Resource Include="Flag\gambia.png" />
+    <Resource Include="Flag\georgia.png" />
+    <Resource Include="Flag\germany.png" />
+    <Resource Include="Flag\ghana.png" />
+    <Resource Include="Flag\gibraltar.png" />
+    <Resource Include="Flag\greece.png" />
+    <Resource Include="Flag\greenland.png" />
+    <Resource Include="Flag\grenada.png" />
+    <Resource Include="Flag\guam.png" />
+    <Resource Include="Flag\guatemala.png" />
+    <Resource Include="Flag\guernsey.png" />
+    <Resource Include="Flag\guinea bissau.png" />
+    <Resource Include="Flag\guinea.png" />
+    <Resource Include="Flag\guyana.png" />
+    <Resource Include="Flag\haiti.png" />
+    <Resource Include="Flag\hawaii.png" />
+    <Resource Include="Flag\honduras.png" />
+    <Resource Include="Flag\hong kong.png" />
+    <Resource Include="Flag\hungary.png" />
+    <Resource Include="Flag\iceland.png" />
+    <Resource Include="Flag\india.png" />
+    <Resource Include="Flag\indonesia.png" />
+    <Resource Include="Flag\iran.png" />
+    <Resource Include="Flag\iraq.png" />
+    <Resource Include="Flag\ireland.png" />
+    <Resource Include="Flag\isle of man.png" />
+    <Resource Include="Flag\israel.png" />
+    <Resource Include="Flag\italy.png" />
+    <Resource Include="Flag\ivory coast.png" />
+    <Resource Include="Flag\jamaica.png" />
+    <Resource Include="Flag\japan.png" />
+    <Resource Include="Flag\jersey.png" />
+    <Resource Include="Flag\jordan.png" />
+    <Resource Include="Flag\kazakhstan.png" />
+    <Resource Include="Flag\kenya.png" />
+    <Resource Include="Flag\kiribati.png" />
+    <Resource Include="Flag\kosovo.png" />
+    <Resource Include="Flag\kuwait.png" />
+    <Resource Include="Flag\kyrgyzstan.png" />
+    <Resource Include="Flag\laos.png" />
+    <Resource Include="Flag\latvia.png" />
+    <Resource Include="Flag\lebanon.png" />
+    <Resource Include="Flag\lesotho.png" />
+    <Resource Include="Flag\liberia.png" />
+    <Resource Include="Flag\libya.png" />
+    <Resource Include="Flag\liechtenstein.png" />
+    <Resource Include="Flag\lithuania.png" />
+    <Resource Include="Flag\luxembourg.png" />
+    <Resource Include="Flag\macao.png" />
+    <Resource Include="Flag\madagascar.png" />
+    <Resource Include="Flag\madeira.png" />
+    <Resource Include="Flag\malaysia.png" />
+    <Resource Include="Flag\malawi.png" />
+    <Resource Include="Flag\maldives.png" />
+    <Resource Include="Flag\mali.png" />
+    <Resource Include="Flag\malta.png" />
+    <Resource Include="Flag\marshall-island.png" />
+    <Resource Include="Flag\martinique.png" />
+    <Resource Include="Flag\mauritania.png" />
+    <Resource Include="Flag\mauritius.png" />
+    <Resource Include="Flag\melilla.png" />
+    <Resource Include="Flag\mexico.png" />
+    <Resource Include="Flag\micronesia.png" />
+    <Resource Include="Flag\moldova.png" />
+    <Resource Include="Flag\monaco.png" />
+    <Resource Include="Flag\mongolia.png" />
+    <Resource Include="Flag\montenegro.png" />
+    <Resource Include="Flag\montserrat.png" />
+    <Resource Include="Flag\morocco.png" />
+    <Resource Include="Flag\mozambique.png" />
+    <Resource Include="Flag\myanmar.png" />
+    <Resource Include="Flag\namibia.png" />
+    <Resource Include="Flag\nauru.png" />
+    <Resource Include="Flag\nepal.png" />
+    <Resource Include="Flag\netherlands.png" />
+    <Resource Include="Flag\new zealand.png" />
+    <Resource Include="Flag\nicaragua.png" />
+    <Resource Include="Flag\niger.png" />
+    <Resource Include="Flag\nigeria.png" />
+    <Resource Include="Flag\niue.png" />
+    <Resource Include="Flag\north korea.png" />
+    <Resource Include="Flag\norway.png" />
+    <Resource Include="Flag\oman.png" />
+    <Resource Include="Flag\ossetia.png" />
+    <Resource Include="Flag\otan.png" />
+    <Resource Include="Flag\pakistan.png" />
+    <Resource Include="Flag\palau.png" />
+    <Resource Include="Flag\palestinian territory.png" />
+    <Resource Include="Flag\panama.png" />
+    <Resource Include="Flag\papua new guinea.png" />
+    <Resource Include="Flag\paraguay.png" />
+    <Resource Include="Flag\peru.png" />
+    <Resource Include="Flag\philippines.png" />
+    <Resource Include="Flag\portugal.png" />
+    <Resource Include="Flag\qatar.png" />
+    <Resource Include="Flag\macedonia.png" />
+    <Resource Include="Flag\poland.png" />
+    <Resource Include="Flag\republic of the congo.png" />
+    <Resource Include="Flag\romania.png" />
+    <Resource Include="Flag\russia.png" />
+    <Resource Include="Flag\rwanda.png" />
+    <Resource Include="Flag\saint kitts and nevis.png" />
+    <Resource Include="Flag\samoa.png" />
+    <Resource Include="Flag\sardinia.png" />
+    <Resource Include="Flag\saudi arabia.png" />
+    <Resource Include="Flag\scotland.png" />
+    <Resource Include="Flag\senegal.png" />
+    <Resource Include="Flag\serbia.png" />
+    <Resource Include="Flag\seychelles.png" />
+    <Resource Include="Flag\sicily.png" />
+    <Resource Include="Flag\sierra leone.png" />
+    <Resource Include="Flag\singapore.png" />
+    <Resource Include="Flag\sint maarten.png" />
+    <Resource Include="Flag\slovakia.png" />
+    <Resource Include="Flag\slovenia.png" />
+    <Resource Include="Flag\solomon islands.png" />
+    <Resource Include="Flag\somalia.png" />
+    <Resource Include="Flag\somaliland.png" />
+    <Resource Include="Flag\south africa.png" />
+    <Resource Include="Flag\south korea.png" />
+    <Resource Include="Flag\south sudan.png" />
+    <Resource Include="Flag\spain.png" />
+    <Resource Include="Flag\sri lanka.png" />
+    <Resource Include="Flag\saint lucia.png" />
+    <Resource Include="Flag\saint vincent and the grenadines.png" />
+    <Resource Include="Flag\sudan.png" />
+    <Resource Include="Flag\suriname.png" />
+    <Resource Include="Flag\swaziland.png" />
+    <Resource Include="Flag\sweden.png" />
+    <Resource Include="Flag\switzerland.png" />
+    <Resource Include="Flag\syria.png" />
+    <Resource Include="Flag\taiwan.png" />
+    <Resource Include="Flag\tajikistan.png" />
+    <Resource Include="Flag\tanzania.png" />
+    <Resource Include="Flag\thailand.png" />
+    <Resource Include="Flag\tibet.png" />
+    <Resource Include="Flag\togo.png" />
+    <Resource Include="Flag\tokelau.png" />
+    <Resource Include="Flag\tonga.png" />
+    <Resource Include="Flag\transnistria.png" />
+    <Resource Include="Flag\trinidad and tobago.png" />
+    <Resource Include="Flag\tunisia.png" />
+    <Resource Include="Flag\turkey.png" />
+    <Resource Include="Flag\turkmenistan.png" />
+    <Resource Include="Flag\turks and caicos.png" />
+    <Resource Include="Flag\tuvalu.png" />
+    <Resource Include="Flag\uganda.png" />
+    <Resource Include="Flag\ukraine.png" />
+    <Resource Include="Flag\united arab emirates.png" />
+    <Resource Include="Flag\united kingdom.png" />
+    <Resource Include="Flag\united nations.png" />
+    <Resource Include="Flag\united states.png" />
+    <Resource Include="Flag\uruguay.png" />
+    <Resource Include="Flag\uzbekistn.png" />
+    <Resource Include="Flag\vanuatu.png" />
+    <Resource Include="Flag\vatican city.png" />
+    <Resource Include="Flag\venezuela.png" />
+    <Resource Include="Flag\vietnam.png" />
+    <Resource Include="Flag\virgin islands.png" />
+    <Resource Include="Flag\wales.png" />
+    <Resource Include="Flag\yemen.png" />
+    <Resource Include="Flag\zambia.png" />
+    <Resource Include="Flag\zimbabwe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\lavender.png" />
+    <Resource Include="Resources\moulin-rouge.png" />
+    <Resource Include="Resources\notre-dame.png" />
+    <Resource Include="Resources\sacre-coeur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\palace-of-versailles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mont saint-michel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\chambord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gorge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\french guiana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\guadeloupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\puerto rico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\new caledonia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Chenonceau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Palais des Papes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\snow mountain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\snow resort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\dune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\notre-dame-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\lake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Petite-France.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\lighthouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\canal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\western sahara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\reunion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\mayotte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Flag\blue dot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\black_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\museum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\pantheon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\La Madeleine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\opera garnier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\Monalisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\001-artist.png" />
+    <Resource Include="France Icon\001-wine-barrel.png" />
+    <Resource Include="France Icon\002-bread.png" />
+    <Resource Include="France Icon\002-cafe-1.png" />
+    <Resource Include="France Icon\003-mannequin.png" />
+    <Resource Include="France Icon\004-baguette.png" />
+    <Resource Include="France Icon\004-cafe.png" />
+    <Resource Include="France Icon\004-football-cup.png" />
+    <Resource Include="France Icon\005-coffee shop.png" />
+    <Resource Include="France Icon\005-french.png" />
+    <Resource Include="France Icon\005-grapes.png" />
+    <Resource Include="France Icon\006-cheese %282%29.png" />
+    <Resource Include="France Icon\006-cheese.png" />
+    <Resource Include="France Icon\006-mime.png" />
+    <Resource Include="France Icon\007-beret.png" />
+    <Resource Include="France Icon\007-fountain.png" />
+    <Resource Include="France Icon\007-notre dame.png" />
+    <Resource Include="France Icon\008-cafe.png" />
+    <Resource Include="France Icon\008-coffee.png" />
+    <Resource Include="France Icon\008-hot-air-balloon.png" />
+    <Resource Include="France Icon\009-arc de triomphe.png" />
+    <Resource Include="France Icon\009-coffee.png" />
+    <Resource Include="France Icon\010-couple.png" />
+    <Resource Include="France Icon\010-lavender.png" />
+    <Resource Include="France Icon\010-poodle.png" />
+    <Resource Include="France Icon\011-cheese.png" />
+    <Resource Include="France Icon\011-gargoyle.png" />
+    <Resource Include="France Icon\011-scooter.png" />
+    <Resource Include="France Icon\012-bicycle.png" />
+    <Resource Include="France Icon\012-fleur de lis.png" />
+    <Resource Include="France Icon\012-paris.png" />
+    <Resource Include="France Icon\013-bag.png" />
+    <Resource Include="France Icon\013-monument.png" />
+    <Resource Include="France Icon\013-perfume.png" />
+    <Resource Include="France Icon\014-fashion %282%29.png" />
+    <Resource Include="France Icon\014-fashion.png" />
+    <Resource Include="France Icon\014-rooster.png" />
+    <Resource Include="France Icon\015-dress.png" />
+    <Resource Include="France Icon\016-bohemian.png" />
+    <Resource Include="France Icon\017-cosmetics.png" />
+    <Resource Include="France Icon\017-painting.png" />
+    <Resource Include="France Icon\018-fleur-de-lis.png" />
+    <Resource Include="France Icon\018-house.png" />
+    <Resource Include="France Icon\018-wine.png" />
+    <Resource Include="France Icon\019-macarons.png" />
+    <Resource Include="France Icon\019-macaroon.png" />
+    <Resource Include="France Icon\019-street light.png" />
+    <Resource Include="France Icon\020-sacre-coeur.png" />
+    <Resource Include="France Icon\020-soufflé.png" />
+    <Resource Include="France Icon\021-cafe.png" />
+    <Resource Include="France Icon\021-moulin-rouge.png" />
+    <Resource Include="France Icon\022-coffee.png" />
+    <Resource Include="France Icon\022-obelisk.png" />
+    <Resource Include="France Icon\023-fashion-bag.png" />
+    <Resource Include="France Icon\023-metro.png" />
+    <Resource Include="France Icon\023-snails.png" />
+    <Resource Include="France Icon\024-cock.png" />
+    <Resource Include="France Icon\024-mona lisa.png" />
+    <Resource Include="France Icon\025-coffee.png" />
+    <Resource Include="France Icon\026-couple.png" />
+    <Resource Include="France Icon\026-kepi.png" />
+    <Resource Include="France Icon\026-signal.png" />
+    <Resource Include="France Icon\027-frogs.png" />
+    <Resource Include="France Icon\027-moulin rouge.png" />
+    <Resource Include="France Icon\027-street-lamp.png" />
+    <Resource Include="France Icon\028-french-bread.png" />
+    <Resource Include="France Icon\028-hot air balloon.png" />
+    <Resource Include="France Icon\028-park.png" />
+    <Resource Include="France Icon\029-bicycle.png" />
+    <Resource Include="France Icon\029-poodle.png" />
+    <Resource Include="France Icon\030-croissant.png" />
+    <Resource Include="France Icon\030-wine.png" />
+    <Resource Include="France Icon\031-wine-1.png" />
+    <Resource Include="France Icon\032-parfume.png" />
+    <Resource Include="France Icon\034-cafe.png" />
+    <Resource Include="France Icon\035-wine.png" />
+    <Resource Include="France Icon\036-croissant.png" />
+    <Resource Include="France Icon\037-artist.png" />
+    <Resource Include="France Icon\039-high-heel.png" />
+    <Resource Include="France Icon\church.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\key num.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\key lgbt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Landmark\et.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Landmark\lm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="France Icon\c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Landmark\Info msm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fes jp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fes rio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\info tm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Flag\paris.mp4" />
+    <Resource Include="Landmark\sl.png" />
+    <Resource Include="Landmark\lama.png" />
+    <Resource Include="France Icon\go-back.png" />
+    <Resource Include="Landmark\bi.png" />
+    <Resource Include="Landmark\fdl.png" />
+    <Resource Include="Landmark\fountain.png" />
+    <Resource Include="Landmark\love.png" />
+    <Resource Include="Landmark\mr.png" />
+    <Resource Include="Landmark\pan.png" />
+    <Resource Include="Landmark\paris.png" />
+    <Resource Include="Landmark\pg.png" />
+    <Resource Include="Landmark\co.png" />
+    <Resource Include="Landmark\fas.png" />
+    <Resource Include="Landmark\gg.png" />
+    <Resource Include="Landmark\hab.png" />
+    <Resource Include="Landmark\lo.png" />
+    <Resource Include="Landmark\mc.png" />
+    <Resource Include="Landmark\poodle.png" />
+    <Resource Include="Landmark\s.png" />
+    <Resource Include="Landmark\art.png" />
+    <Resource Include="Landmark\fl.png" />
+    <Resource Include="Landmark\mona.png" />
+    <Resource Include="Landmark\snail.png" />
+    <Resource Include="Landmark\wine.png" />
+    <Resource Include="Landmark\cafe.png" />
+    <Resource Include="Landmark\fb.png" />
+    <Resource Include="Landmark\adm.png" />
+    <Resource Include="Landmark\cm.png" />
+    <Resource Include="Landmark\dp.png" />
+    <Resource Include="Landmark\la.png" />
+    <Resource Include="Landmark\lf.png" />
+    <Resource Include="Landmark\ltv.png" />
+    <Resource Include="Landmark\pdg.png" />
+    <Resource Include="Landmark\pdp.png" />
+    <Resource Include="Landmark\vg.png" />
+    <Resource Include="Landmark\chateau.png" />
+    <Resource Include="Landmark\arc.png" />
+    <Resource Include="Landmark\ile.png" />
+    <Resource Include="Landmark\nd.png" />
+    <Resource Include="Landmark\ndS.png" />
+    <Resource Include="Landmark\ptt.png" />
+    <Resource Include="Landmark\pv.png" />
+    <Resource Include="Landmark\sc.png" />
+    <Resource Include="Resources\Info guy.png" />
+    <Resource Include="Resources\Info nk.png" />
+    <Resource Include="Resources\Info nz.png" />
+    <Resource Include="Resources\Info sk.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
